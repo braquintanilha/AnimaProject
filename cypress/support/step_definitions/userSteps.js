@@ -18,7 +18,7 @@ When('eu acesso o cadastro de usuarios', () => {
 });
 
 When('eu cadastro um usuario com os dados corretos', () => {
-    userPage.cadastraUsuario()
+    userPage.cadastraUsuario('dadosCompletos')
 });
 
 Then('eu devo visualizar o usuario cadastrado', () => {
@@ -26,7 +26,7 @@ Then('eu devo visualizar o usuario cadastrado', () => {
 })
 
 When('eu cadastro um usuario sem os dados obrigatorios', () => {
-    userPage.clicaBotaoCriar()
+    userPage.cadastraUsuario('dadosIncompletos')
 })
 
 Then('eu devo visualizar a mensagem de erro', () => {
